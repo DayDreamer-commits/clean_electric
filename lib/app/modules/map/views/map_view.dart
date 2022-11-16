@@ -16,17 +16,17 @@ class MapView extends GetView<map_view.MapController> {
         ),
         body: OSMFlutter(
           controller: controller.mapController,
-          trackMyPosition: false,
-          initZoom: 12,
-          minZoomLevel: 8,
-          maxZoomLevel: 14,
+          trackMyPosition: true,
+          initZoom: 18,
+          minZoomLevel: 2,
+          maxZoomLevel: 19,
           stepZoom: 1.0,
           userLocationMarker: UserLocationMaker(
             personMarker: const MarkerIcon(
               icon: Icon(
                 Icons.location_history_rounded,
                 color: Colors.red,
-                size: 48,
+                size: 64,
               ),
             ),
             directionArrowMarker: const MarkerIcon(
@@ -44,7 +44,7 @@ class MapView extends GetView<map_view.MapController> {
                 color: Colors.brown,
               ),
             ),
-            roadColor: Colors.yellowAccent,
+            roadColor: Colors.redAccent,
           ),
           markerOption: MarkerOption(
             defaultMarker: const MarkerIcon(

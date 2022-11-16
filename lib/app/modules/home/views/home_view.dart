@@ -30,6 +30,11 @@ class HomeView extends GetView<HomeController> {
                     arguments: FakeSwapStation.vehicle),
                 title: const Text("Vehicle Details"),
               ),
+              ListTile(
+                onTap: () => Get.toNamed(Routes.AR_CAMERA,
+                    ),
+                title: const Text("AR"),
+              ),
             ],
           ),
         ),

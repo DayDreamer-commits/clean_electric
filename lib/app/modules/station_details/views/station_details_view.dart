@@ -1,8 +1,11 @@
 import 'package:clay_containers/clay_containers.dart';
+import 'package:clean_electric/app/static_data/swap_stations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_sticky_header/flutter_sticky_header.dart';
 import 'package:get/get.dart';
 
+import '../../../../widgets/battery_widget.dart';
+import '../../../../widgets/header_widget.dart';
 import '../controllers/station_details_controller.dart';
 
 class StationDetailsView extends GetView<StationDetailsController> {
@@ -31,21 +34,8 @@ class StationDetailsView extends GetView<StationDetailsController> {
               centerTitle: true,
             ),
             SliverStickyHeader.builder(
-              builder: (context, state) => Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ClayContainer(
-                  color: Colors.blue.shade200,
-                  height: 200,
-                  width: double.infinity,
-                  curveType: CurveType.convex,
-                  child: const Center(
-                    child: Icon(
-                      Icons.electric_car,
-                      size: 128,
-                    ),
-                  ),
-                ),
-              ),
+              builder: (context, state) => const HeaderWidget(icon: Icons.electric_car, headerText: 'Cars',),
+
               sliver: SliverGrid(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
@@ -53,77 +43,27 @@ class StationDetailsView extends GetView<StationDetailsController> {
                 ),
                 delegate: SliverChildBuilderDelegate(
                   childCount: 4,
-                  (context, index) => Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: ClayContainer(
-                      curveType: CurveType.concave,
-                      color: Colors.blue.shade50,
-                      child: const Center(
-                        child: Icon(
-                          Icons.battery_3_bar,
-                          size: 64,
-                        ),
-                      ),
-                    ),
-                  ),
+                      (context, index) =>BatteryWidget(battery: FakeSwapStation.batteries.first,),
                 ),
               ),
             ),
             SliverStickyHeader.builder(
-              builder: (context, state) => Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ClayContainer(
-                  color: Colors.blue.shade200,
-                  height: 200,
-                  width: double.infinity,
-                  curveType: CurveType.convex,
-                  child: const Center(
-                    child: Icon(
-                      Icons.electric_rickshaw,
-                      size: 128,
-                    ),
-                  ),
-                ),
-              ),
+              builder: (context, state) =>const HeaderWidget(icon: Icons.electric_rickshaw, headerText: 'Rickshaw',),
               sliver: SliverGrid(
+
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+
                   crossAxisCount: 2,
                   childAspectRatio: 1.5,
                 ),
                 delegate: SliverChildBuilderDelegate(
                   childCount: 4,
-                  (context, index) => Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: ClayContainer(
-                      curveType: CurveType.concave,
-                      color: Colors.blue.shade50,
-                      child: const Center(
-                        child: Icon(
-                          Icons.battery_3_bar,
-                          size: 64,
-                        ),
-                      ),
-                    ),
-                  ),
+                  (context, index) =>BatteryWidget(battery: FakeSwapStation.batteries.first,),
                 ),
               ),
             ),
             SliverStickyHeader.builder(
-              builder: (context, state) => Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ClayContainer(
-                  color: Colors.blue.shade200,
-                  height: 200,
-                  width: double.infinity,
-                  curveType: CurveType.convex,
-                  child: const Center(
-                    child: Icon(
-                      Icons.electric_bike,
-                      size: 128,
-                    ),
-                  ),
-                ),
-              ),
+              builder: (context, state) => const HeaderWidget(icon: Icons.electric_bike, headerText: 'Bike',),
               sliver: SliverGrid(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
@@ -131,19 +71,7 @@ class StationDetailsView extends GetView<StationDetailsController> {
                 ),
                 delegate: SliverChildBuilderDelegate(
                   childCount: 8,
-                  (context, index) => Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: ClayContainer(
-                      curveType: CurveType.concave,
-                      color: Colors.blue.shade50,
-                      child: const Center(
-                        child: Icon(
-                          Icons.battery_3_bar,
-                          size: 64,
-                        ),
-                      ),
-                    ),
-                  ),
+                      (context, index) =>BatteryWidget(battery: FakeSwapStation.batteries.first,),
                 ),
               ),
             ),

@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/ar_camera/bindings/ar_camera_binding.dart';
+import '../modules/ar_camera/views/ar_camera_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/map/bindings/map_binding.dart';
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.MAP,
       page: () => const MapView(),
       binding: MapBinding(),
+    ),
+    GetPage(
+      name: _Paths.AR_CAMERA,
+      page: () => const ArCameraView(),
+      binding: ArCameraBinding(),
     ),
   ];
 }

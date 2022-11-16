@@ -7,6 +7,7 @@ abstract class Routes {
   static const VEHICLE_DETAILS = _Paths.VEHICLE_DETAILS;
   static const STATION_DETAILS = _Paths.STATION_DETAILS;
   static const MAP = _Paths.MAP;
+  static const AR_CAMERA = _Paths.AR_CAMERA;
 }
 
 abstract class _Paths {
@@ -15,4 +16,5 @@ abstract class _Paths {
   static const VEHICLE_DETAILS = '/vehicle-details';
   static const STATION_DETAILS = '/station-details';
   static const MAP = '/map';
+  static const AR_CAMERA = '/ar-camera';
 }

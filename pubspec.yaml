@@ -33,9 +33,11 @@ dependencies:
   google_maps_flutter: ^2.2.1
   flutter_sticky_header: ^0.6.4
   flutter_osm_plugin: ^0.40.3
+  arcore_flutter_plugin:
+    path: ../arcore_flutter_plugin-master
 
 dev_dependencies:
-  get_cli: any
+  get_cli: ^1.8.1
   flutter_lints: ^2.0.0
   flutter_launcher_icons: ^0.9.3
   build_runner: ^2.1.7
