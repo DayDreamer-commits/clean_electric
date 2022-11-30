@@ -14,6 +14,7 @@ class HomeView extends GetView<HomeController> {
         appBar: AppBar(
           title: const Text('Clean Electric'),
           centerTitle: true,
+          actions: [IconButton(onPressed: controller.scan, icon: const Icon(Icons.qr_code_scanner))],
         ),
         drawer: Drawer(
           child: ListView(
@@ -35,6 +36,12 @@ class HomeView extends GetView<HomeController> {
                     ),
                 title: const Text("AR"),
               ),
+              ListTile(
+                onTap: () => Get.toNamed(Routes.OUR_TEAM,
+                    ),
+                title: const Text("Our Team"),
+              ),
+
             ],
           ),
         ),

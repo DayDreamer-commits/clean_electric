@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>894275492909-rq6p8fh14f5ecev6oqgchrc66fb0sbrc.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.894275492909-rq6p8fh14f5ecev6oqgchrc66fb0sbrc</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>894275492909-6ge0u4rsg44lbfbd30ok0ceq53tcfcr6.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAIUhru2yNHxkG8x4G-AOqsxHxSl4LRR-A</string>
+	<key>GCM_SENDER_ID</key>
+	<string>894275492909</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.amitgunjan.cleanElectric</string>
+	<key>PROJECT_ID</key>
+	<string>cleanelectric</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cleanelectric.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:894275492909:ios:223ff637a81805dff6aca4</string>
+</dict>
+</plist>

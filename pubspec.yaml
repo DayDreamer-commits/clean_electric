@@ -35,6 +35,10 @@ dependencies:
   flutter_osm_plugin: ^0.40.3
   arcore_flutter_plugin:
     path: ../arcore_flutter_plugin-master
+  flutter_native_splash: ^2.2.15
+  firebase_core: ^2.3.0
+  cloud_firestore: ^4.1.0
+  firebase_storage: ^11.0.6
 
 dev_dependencies:
   get_cli: ^1.8.1
@@ -58,14 +62,14 @@ flutter:
 
 flutter_icons:
   android: "launcher_icon"
-  image_path: "assets/images/library.png"
+  image_path: "assets/images/logo.png"
 
 
 #  flutter pub run flutter_native_splash:create
 
 flutter_native_splash:
   color: "#FFFFFF"
-  image: assets/images/splash.png
+  image: assets/images/logo.png
   android: true
   android_gravity: fill
   fullscreen: true

@@ -10,7 +10,7 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(4.0),
       child: ClayContainer(
         emboss: true,
         depth: 0,
@@ -36,7 +36,7 @@ class HeaderWidget extends StatelessWidget {
                 child: Icon(
                   icon,
                   color:Colors.green,
-                  size: 64,
+                  size: 48,
                 ),
               ),
             ),

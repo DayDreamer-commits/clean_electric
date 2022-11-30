@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "894275492909",
+    "project_id": "cleanelectric",
+    "storage_bucket": "cleanelectric.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894275492909:android:6a24b348276c1f44f6aca4",
+        "android_client_info": {
+          "package_name": "com.amitgunjan.clean_electric"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894275492909-6ge0u4rsg44lbfbd30ok0ceq53tcfcr6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.amitgunjan.clean_electric",
+            "certificate_hash": "e17b3bbcac53baaf084625a54b2c0c152a3400bd"
+          }
+        },
+        {
+          "client_id": "894275492909-gk09s34er7d500mjfic6bvnpcrb32dgi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWRYzwVvlRatKVCmloQeQQyoZBvMaBBDA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "894275492909-gk09s34er7d500mjfic6bvnpcrb32dgi.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "894275492909-rq6p8fh14f5ecev6oqgchrc66fb0sbrc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.amitgunjan.cleanElectric"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

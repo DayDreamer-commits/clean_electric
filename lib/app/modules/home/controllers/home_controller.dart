@@ -1,3 +1,4 @@
+import 'package:clean_electric/app/routes/app_pages.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
@@ -22,5 +23,9 @@ class HomeController extends GetxController {
   @override
   void onClose() {
     super.onClose();
+  }
+
+  void scan() {
+    Get.toNamed(Routes.QR_SCANNER);
   }
 }

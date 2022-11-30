@@ -8,6 +8,8 @@ abstract class Routes {
   static const STATION_DETAILS = _Paths.STATION_DETAILS;
   static const MAP = _Paths.MAP;
   static const AR_CAMERA = _Paths.AR_CAMERA;
+  static const OUR_TEAM = _Paths.OUR_TEAM;
+  static const QR_SCANNER = _Paths.QR_SCANNER;
 }
 
 abstract class _Paths {
@@ -17,4 +19,6 @@ abstract class _Paths {
   static const STATION_DETAILS = '/station-details';
   static const MAP = '/map';
   static const AR_CAMERA = '/ar-camera';
+  static const OUR_TEAM = '/our-team';
+  static const QR_SCANNER = '/qr-scanner';
 }

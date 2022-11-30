@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'dart:math';
 
 import 'package:vector_math/vector_math_64.dart' as vector;
 import 'package:arcore_flutter_plugin/arcore_flutter_plugin.dart';
@@ -22,6 +22,7 @@ class ArCameraController extends GetxController {
 
   @override
   void onClose() {
+    arCoreController.dispose();
     super.onClose();
   }
 
@@ -33,13 +34,8 @@ class ArCameraController extends GetxController {
 
   }
 
-  void onTapHandler(String name) {
 
-    Get.defaultDialog(title: "Tap Detected");  }
-  void _handleOnPlaneTap(List<ArCoreHitTestResult> hits) {
-    final hit = hits.first;
-
-
+  Future _addSphere(ArCoreHitTestResult hit) async {
     final moonMaterial = ArCoreMaterial(color: Colors.grey);
 
     final moonShape = ArCoreSphere(
@@ -47,30 +43,51 @@ class ArCameraController extends GetxController {
       radius: 0.03,
     );
 
-    vector.Vector3? position = vector.Vector3(0.2, 0, 0);
-    vector.Vector4? rotation = vector.Vector4(0, 0, 0, 0);
-
     final moon = ArCoreNode(
       shape: moonShape,
-      position: position,
-      rotation: rotation,
+      position: vector.Vector3(0.2, 0, 0),
+      rotation: vector.Vector4(0, 0, 0, 0),
     );
 
+    final ByteData batteryTextureByte = await rootBundle.load('assets/images/battery.png');
+
+    final batteryMaterial = ArCoreMaterial(color: const Color.fromARGB(120, 66, 134,  244) ,textureBytes:  batteryTextureByte.buffer.asUint8List() );
+
+    final batteryShape = ArCoreCylinder(materials: [batteryMaterial],height: 0.1,radius: 0.1);
+
+    final battery = ArCoreNode(shape: batteryShape, position: vector.Vector3(0.4, 0, 0),
+      rotation: vector.Vector4(1, 0, 0, 0), );
+
+    final ByteData textureBytes = await rootBundle.load('assets/images/earth.jpg');
+
     final earthMaterial = ArCoreMaterial(
-        color: const Color.fromARGB(120, 66, 134, 244),);
+        color: const Color.fromARGB(120, 66, 134, 244),
+        textureBytes: textureBytes.buffer.asUint8List());
 
     final earthShape = ArCoreSphere(
       materials: [earthMaterial],
       radius: 0.1,
     );
 
+
     final earth = ArCoreNode(
         shape: earthShape,
-        children: [moon],
+        children: [moon,battery],
         position: hit.pose.translation + vector.Vector3(0.0, 1.0, 0.0),
         rotation: hit.pose.rotation);
 
-    arCoreController.addArCoreNodeWithAnchor(earth);
+
+    arCoreController.addArCoreNodeWithAnchor(battery);
+  }
+
+  void onTapHandler(String name) {
+
+    Get.defaultDialog(title: "Tap Detected $name");  }
+  void _handleOnPlaneTap(List<ArCoreHitTestResult> hits) {
+    final hit = hits.first;
+
+
+ _addSphere(hit);
   }
 
 }
